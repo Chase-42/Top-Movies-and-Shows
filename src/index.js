@@ -1,8 +1,10 @@
-import React from "react";
-import ReactDOM from "react-dom";
-class Welcome extends React.Component {
-    render () {
-        return <h1>Hello World from React boilerplate</h1>;
-    }
-}
-ReactDOM.render(<Welcome />, document.getElementById("root"));
+import React from 'react';
+import ReactDOM from 'react-dom';
+import App from './App';
+
+ReactDOM.render(
+  <React.StrictMode>
+    <App />
+  </React.StrictMode>,
+  document.getElementById('root')
+);
