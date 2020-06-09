@@ -6,8 +6,6 @@ My submission for Remote Roofing's Frontend Development challenge!
 
 
 ## Tech/framework used
-Ex. -
-
 <b>Built with</b>
 - [React](https://reactjs.org/)
 - [Material-Ui](https://material-ui.com/)
@@ -15,7 +13,6 @@ Ex. -
 ## Features
 
 ## Installation
-
 
 ## API Reference
 https://raw.githubusercontent.com/StreamCo/react-coding-challenge/master/feed/sample.json
