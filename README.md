@@ -20,3 +20,4 @@ https://raw.githubusercontent.com/StreamCo/react-coding-challenge/master/feed/sa
 ## Tests
 Tests are located within src/tests and can be run with the "npm run test" command in the terminal 
 
+
