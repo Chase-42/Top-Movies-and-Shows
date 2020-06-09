@@ -10,8 +10,6 @@ My submission for Remote Roofing's Frontend Development challenge!
 - [React](https://reactjs.org/)
 - [Material-Ui](https://material-ui.com/)
 
-## Features
-
 ## Installation
 
 ## API Reference
