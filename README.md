@@ -2,7 +2,7 @@
 My submission for Remote Roofing's Frontend Development challenge!
  
 ## Screenshots
-![alt text](https://photos.google.com/share/AF1QipPWMs-QcmgnUwn2sOQ_b16Lk2Pwgu682J9yuoamb59u3i9fVW-_h9AkcdeNZX4m-w?key=ZnFwQ3l3bGd1VmRsMUZNRS16VDNzdHlkN1JSYmJn)
+![alt text]((https://drive.google.com/uc?export=view&id=1ku7Molqpo-AqZi1XZw6AW1-G1kKANBom)
 
 
 ## Tech/framework used
