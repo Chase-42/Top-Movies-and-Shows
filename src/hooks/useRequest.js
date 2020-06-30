@@ -12,13 +12,17 @@ const useRequest = (initUrl, content) => {
       try {
         setLoading(true);
         const response = await axios(initUrl);
-        const responseArray = response.data.entries;
-        const movies = responseArray.filter(
-          (movie) => movie.programType === `${content}`
-        );
-        const first21 = movies.slice(0, 21);
-        const sortedMovies = first21.sort();
-        if (!ignore) setData(sortedMovies);
+        console.log(response);
+        if (!ignore) setData(response.data.entries);
+        if (response.data.results) {
+          const resultsArray = response.data.results;
+          const first10 = resultsArray.slice(0, 10);
+          if (!ignore) setData(first10);
+        } else {
+          const resposneArray = response.data.items;
+          const first21 = resposneArray.slice(0, 21);
+          if (!ignore) setData(first21);
+        }
       } catch (err) {
         setError({ error: err });
       } finally {

@@ -14,19 +14,9 @@ const useStyles = makeStyles((theme) => ({
 
 export default function Series() {
   const classes = useStyles();
-  const [page, setPage] = useState('');
-
-  useEffect(() => {
-    const parts = String(window.location.href).split('/');
-    const lastSegment = parts.pop() || parts.pop();
-    setPage(lastSegment);
-    localStorage.clear();
-    localStorage.setItem('page', lastSegment);
-  }, []);
 
   const { data, loading, error } = useRequest(
-    'https://raw.githubusercontent.com/StreamCo/react-coding-challenge/master/feed/sample.json',
-    'series'
+    `https://imdb-api.com/en/API/MostPopularTVs/k_5L8PB42u`
   );
 
   if (loading) return <h4>Loading...</h4>;

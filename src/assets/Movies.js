@@ -15,16 +15,8 @@ const useStyles = makeStyles((theme) => ({
 export default function Movies() {
   const classes = useStyles();
 
-  useEffect(() => {
-    const parts = String(window.location.href).split('/');
-    const lastSegment = parts.pop() || parts.pop();
-    localStorage.clear();
-    localStorage.setItem('page', lastSegment);
-  }, []);
-
   const { data, loading, error } = useRequest(
-    'https://raw.githubusercontent.com/StreamCo/react-coding-challenge/master/feed/sample.json',
-    'movie'
+    `https://imdb-api.com/en/API/MostPopularMovies/k_5L8PB42u`
   );
 
   if (loading) return <h4>Loading...</h4>;

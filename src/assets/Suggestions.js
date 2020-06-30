@@ -1,32 +1,32 @@
 import React, { Fragment } from 'react';
-import MovieItem from './MovieItem';
+import SuggestionItem from './SuggestionItem';
 import Grid from '@material-ui/core/Grid';
 import { makeStyles } from '@material-ui/core/styles';
 
 const useStyles = makeStyles((theme) => ({
   root: {
-    flexGrow: 1,
-    marginTop: 20,
-    marginBottom: 20,
-    marginRight: 20,
     display: 'flex',
+    alignItems: 'flex-end',
+    marginTop: '2rem',
+    marginRight: '2.5rem',
+    width: 'inherit',
   },
 }));
 
 const Suggestions = ({ results }) => {
   const classes = useStyles();
-
+  console.log(results);
   return (
     <Fragment>
       <div className={classes.root}>
         <Grid
           container
-          direction='column-reverse'
+          direction='column'
           justify='space-evenly'
           alignItems='flex-end'
         >
           {results.map((item) => {
-            return <MovieItem movie={item} key={item.title} />;
+            return <SuggestionItem movie={item} key={item.id} />;
           })}
         </Grid>
       </div>

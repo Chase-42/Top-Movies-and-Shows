@@ -14,6 +14,8 @@ import Collapse from '@material-ui/core/Collapse';
 const useStyles = makeStyles((theme) => ({
   root: {
     padding: theme.spacing(1),
+    marginTop: 5,
+    marginBottom: 5,
   },
   title: {
     fontSize: 14,
@@ -45,11 +47,11 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
-export default function MovieItem({ movie }) {
+export default function SuggestionItem({ movie }) {
   const [expanded, setExpanded] = useState(false);
 
   const classes = useStyles();
-
+  console.log(movie);
   const handleExpandClick = () => {
     setExpanded(!expanded);
   };
@@ -62,11 +64,6 @@ export default function MovieItem({ movie }) {
             <Typography gutterBottom variant='h5' component='h2'>
               {movie.title}
             </Typography>
-            <CardMedia
-              className={classes.media}
-              image={movie.image}
-              title='Paella dish'
-            />
           </CardContent>
           <CardActions disableSpacing>
             <IconButton
@@ -82,8 +79,14 @@ export default function MovieItem({ movie }) {
           </CardActions>
           <Collapse in={expanded} timeout='auto' unmountOnExit>
             <CardContent>
-              <Typography paragraph>Release Year: {movie.year}</Typography>
-              <Typography paragraph>Rating: {movie.imDbRating}</Typography>
+              <Typography paragraph>
+                Description: {movie.description}
+              </Typography>
+              <CardMedia
+                className={classes.media}
+                image={movie.image}
+                title='Paella dish'
+              />
             </CardContent>
           </Collapse>
         </Card>

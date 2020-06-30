@@ -14,6 +14,7 @@ import HomeIcon from '@material-ui/icons/Home';
 import Button from '@material-ui/core/Button';
 import Link from '@material-ui/core/Link';
 import Typography from '@material-ui/core/Typography';
+import Grid from '@material-ui/core/Grid';
 
 const useStyles = makeStyles((theme) => ({
   clearButton: {
@@ -73,14 +74,11 @@ export default function SearchAppBar() {
   const [isEmptyState, setIsEmptyState] = useState(true);
   const [isAddTripState, setIsAddTripState] = useState(false);
 
-  const page = localStorage.getItem('page');
-
   const { data } = useRequest(
-    'https://raw.githubusercontent.com/StreamCo/react-coding-challenge/master/feed/sample.json',
-    `${page}`
+    `https://imdb-api.com/en/API/Search/k_5L8PB42u/${query}`
+    // 'https://raw.githubusercontent.com/StreamCo/react-coding-challenge/master/feed/sample.json'
   );
-  console.log(page);
-
+  console.log('data', data);
   function findMatches(wordToMatch, data) {
     return data.filter((movie) => {
       const regex = new RegExp(wordToMatch, 'gi');
@@ -89,6 +87,7 @@ export default function SearchAppBar() {
   }
 
   const displayMatches = (e) => {
+    console.log(data);
     const matchArray = findMatches(query, data);
     matchArray
       .map((movie) => {
@@ -141,6 +140,7 @@ export default function SearchAppBar() {
               placeholder='Search…'
               onChange={(event) => handleOnChange(event)}
               onKeyUp={displayMatches}
+              onKeyDown={displayMatches}
               value={query}
               classes={{
                 root: classes.inputRoot,
@@ -151,7 +151,12 @@ export default function SearchAppBar() {
           </div>
         </Toolbar>
       </AppBar>
-      {isAddTripState && <Suggestions results={results} />}
+      {isAddTripState && (
+        <Grid container spacing={4}>
+          {' '}
+          <Suggestions results={results} />{' '}
+        </Grid>
+      )}
     </div>
   );
 }
