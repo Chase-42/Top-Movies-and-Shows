@@ -1,5 +1,5 @@
-## Frontend Test
-My submission for Remote Roofing's Frontend Development challenge!
+## Top Movies & TV Shows
+An application that shows a list of top movies & tv shows from IMDB and allows you to search for any movie or tv show your heart desires. 
 
 ## Tech/framework used
 <b>Built with</b>
