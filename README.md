@@ -1,6 +1,9 @@
 ## Top Movies & TV Shows
 An application that shows a list of top movies & tv shows from IMDB and allows you to search for any movie or tv show your heart desires. 
 
+## Hosted Application
+https://remote-roofing-test.netlify.app/
+
 ## Tech/framework used
 <b>Built with</b>
 - [React](https://reactjs.org/)
@@ -16,7 +19,7 @@ An application that shows a list of top movies & tv shows from IMDB and allows y
 - [ ] Push commits: git push origin `<firstName-lastName>`.
 
 ## API Reference
-https://raw.githubusercontent.com/StreamCo/react-coding-challenge/master/feed/sample.json
+https://imdb-api.com/api
 
 ## Tests
 Tests are located within src/tests and can be run with the "npm run test" command in the terminal 
