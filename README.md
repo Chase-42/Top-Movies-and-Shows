@@ -2,11 +2,12 @@
 An application that shows a list of top movies & tv shows from IMDB and allows you to search for any movie or tv show that your heart desires. 
 
 ## Hosted Application
-https://remote-roofing-test.netlify.app/
+https://top-moves-and-shows.netlify.app/#/
 
 ## Tech/framework used
 <b>Built with</b>
 - [React](https://reactjs.org/)
+- [Webpack] (https://webpack.js.org/)
 - [Material-Ui](https://material-ui.com/)
 
 ## Installation
