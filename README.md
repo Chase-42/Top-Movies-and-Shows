@@ -1,4 +1,4 @@
-## Top Movies & TV Shows
+# Top Movies & Shows
 An application that shows a list of top movies & tv shows from IMDB and allows you to search for any movie or tv show that your heart desires. 
 
 ## Hosted Application
