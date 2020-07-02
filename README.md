@@ -8,7 +8,7 @@ https://top-moves-and-shows.netlify.app/#/
 <b>Built with</b>
 - [React](https://reactjs.org/)
 - [Webpack](https://webpack.js.org/)
-- [Material-Ui](https://material-ui.com/)
+- [Material-UI](https://material-ui.com/)
 
 ## Installation
 - [ ] Create a forked copy of this project.
@@ -23,7 +23,7 @@ https://top-moves-and-shows.netlify.app/#/
 https://imdb-api.com/api
 
 ## Tests
-Tests are located within src/tests and can be run with the "npm run test" command in the terminal 
+Tests are located within src/tests and can be run with the "npm run test" command in the terminal. 
 
 
 
