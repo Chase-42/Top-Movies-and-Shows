@@ -76,7 +76,6 @@ export default function SearchAppBar() {
 
   const { data } = useRequest(
     `https://imdb-api.com/en/API/Search/k_5L8PB42u/${query}`
-    // 'https://raw.githubusercontent.com/StreamCo/react-coding-challenge/master/feed/sample.json'
   );
   console.log('data', data);
   function findMatches(wordToMatch, data) {

@@ -1,4 +1,4 @@
-import React, { Fragment, useEffect, useState } from 'react';
+import React, { Fragment } from 'react';
 import MovieItem from './MovieItem';
 import useRequest from '../hooks/useRequest';
 import { makeStyles } from '@material-ui/core/styles';
@@ -10,6 +10,19 @@ const useStyles = makeStyles((theme) => ({
     marginTop: 20,
     marginBottom: 20,
   },
+  loading: {
+    marginTop: 50,
+    marginLeft: 20,
+    fontWeight: 'bolder',
+    fontSize: 40,
+  },
+  error: {
+    marginTop: 50,
+    marginLeft: 20,
+    fontWeight: 'bolder',
+    fontSize: 40,
+    color: '#d50000',
+  },
 }));
 
 export default function Series() {
@@ -19,8 +32,11 @@ export default function Series() {
     `https://imdb-api.com/en/API/MostPopularTVs/k_5L8PB42u`
   );
 
-  if (loading) return <h4>Loading...</h4>;
-  if (error.error) return <h4>Oops, something went wrong..</h4>;
+  if (loading) return <h1 className={classes.loading}>Loading...</h1>;
+  if (error.error) return;
+  <h1 className={classes.error}>
+    Oops, something went wrong... {error.error.message}
+  </h1>;
 
   return (
     <Fragment>
