@@ -4,7 +4,7 @@
 An application that shows a list of top movies & tv shows from IMDB and allows you to search for any movie or tv show that your heart desires. 
 
 ## Hosted Application
-https://top-moves-and-shows.netlify.app/#/
+https://top-movies-and-shows.netlify.app
 
 ## Tech/framework used
 <b>Built with</b>
